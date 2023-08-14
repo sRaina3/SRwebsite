@@ -1,0 +1,22 @@
+.App {
+  width: 100vw;
+  height: 100vh;
+  background-color: black;
+  position: relative;
+  overflow: hidden;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+}
+
+.line {
+  position: absolute;
+  height: 1px;
+  background-color: rgba(128, 128, 128, 0.5);
+  transform-origin: left top;
+}
