@@ -17,10 +17,10 @@ const App = () => {
         let newVX = dot.vx;
         let newVY = dot.vy;
 
-        if (dot.x <= 0 || dot.x >= window.innerWidth) {
+        if (dot.x < 0 || dot.x >= window.innerWidth) {
           newVX = -dot.vx;
         }
-        if (dot.y <= 0 || dot.y >= window.innerHeight) {
+        if (dot.y < 0 || dot.y >= window.innerHeight) {
           newVY = -dot.vy;
         }
 
@@ -54,8 +54,8 @@ const App = () => {
     const newDot = {
       x: event.clientX,
       y: event.clientY,
-      vx: (Math.random() - 0.5) * 3,
-      vy: (Math.random() - 0.5) * 3, 
+      vx: (Math.random() - 0.5) * 2,
+      vy: (Math.random() - 0.5) * 2, 
       color: getRandomColor()
     };
 
