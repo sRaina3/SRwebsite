@@ -10,13 +10,10 @@ const App = () => {
 
   useEffect(() => {
     let animationFrameId;
-
     const animate = () => {
-      setDots((prevDots) =>
-      prevDots.map((dot) => {
+      setDots((prevDots) => prevDots.map((dot) => {
         let newVX = dot.vx;
         let newVY = dot.vy;
-
         if (dot.x < 0 || dot.x >= window.innerWidth) {
           newVX = -dot.vx;
         }
@@ -35,9 +32,8 @@ const App = () => {
     );
       animationFrameId = requestAnimationFrame(animate);
     };
-  
+
     animate();
-  
     return () => {
       cancelAnimationFrame(animationFrameId);
     };
@@ -62,7 +58,6 @@ const App = () => {
     if (dots.length >= 100) {
       setDots(dots.shift());
     }
-
     setDots([...dots, newDot]);
   };
 
@@ -79,37 +74,23 @@ const App = () => {
         <div
           key={index}
           className="dot"
-          style={{
-            left: dot.x,
-            top: dot.y,
-            backgroundColor: dot.color,
-          }}
+          style={{left: dot.x, top: dot.y, backgroundColor: dot.color}}
         >
           {dots.map((otherDot, otherIndex) => {
             if (index !== otherIndex) {
-              const distance = Math.sqrt(
-                (dot.x - otherDot.x) ** 2 + (dot.y - otherDot.y) ** 2
-              );
-
+              const distance = Math.sqrt((dot.x - otherDot.x) ** 2 + (dot.y - otherDot.y) ** 2)
               if (distance <= 100) {
                 return (
                   <div
                     key={otherIndex}
                     className="line"
-                    style={{
-                      left: 6,
-                      top: 6,
-                      width: distance,
-                      transform: `rotate(${Math.atan2(
-                        otherDot.y - dot.y,
-                        otherDot.x - dot.x
-                      )}rad)`,
+                    style={{left: 6, top: 6, width: distance,
+                      transform: `rotate(${Math.atan2(otherDot.y - dot.y, otherDot.x - dot.x)}rad)`
                     }}
                   ></div>
                 );
               }
             }
-
             return null;
           })}
         </div>
