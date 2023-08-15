@@ -4,6 +4,7 @@
   background-color: black;
   position: fixed;
   overflow: hidden;
+  user-select: none;
 }
 
 .dot {
