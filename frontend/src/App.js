@@ -11,7 +11,7 @@ const App = () => {
   const [showDots, setShowDots] = useState(true)
 
   useEffect(() => {
-    /*const newDots = [];
+    const newDots = [];
     for (let i = 0; i < 40; i++) {
       newDots.push({
         x: Math.random() * window.innerWidth,
@@ -21,7 +21,10 @@ const App = () => {
         color: getRandomColor(),
       });
     }
-    setDots(newDots);*/
+    setDots(newDots);
+  }, [])
+  
+  useEffect(() => {
     let animationFrameId;
     const animate = () => {
       if (showDots) {
