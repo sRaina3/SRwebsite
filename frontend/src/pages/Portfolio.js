@@ -1,7 +1,9 @@
 
 const Portfolio = () => {
   return (
-    <div>Portfolio</div>
+    <div className="home-container">
+      <h1 className="welcome-text">Welcome to My Portfolio</h1>
+    </div>
   )
 }
 
