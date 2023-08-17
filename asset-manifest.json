@@ -1,12 +1,14 @@
 {
   "files": {
-    "main.css": "./static/css/main.e769b152.css",
-    "main.js": "./static/js/main.5f679beb.js",
+    "main.css": "./static/css/main.64dd563e.css",
+    "main.js": "./static/js/main.148bd0d6.js",
     "static/media/profile-pic.png": "./static/media/profile-pic.18550f055244d00598fc.png",
     "static/media/react.png": "./static/media/react.81ed438b18e24116794d.png",
     "static/media/python.png": "./static/media/python.dea924d737bb84eb9ce3.png",
     "static/media/c++.png": "./static/media/c++.64f637357bce0ccc8384.png",
     "static/media/alamo-inf.png": "./static/media/alamo-inf.c038a980390e9ebf63ef.png",
+    "static/media/skill-inf.png": "./static/media/skill-inf.f62f1328ca56f5c78037.png",
+    "static/media/viewboard-rm.png": "./static/media/viewboard-rm.a6abb47f499ef60833cf.png",
     "static/media/skill-check.png": "./static/media/skill-check.b31fe4eaf273da93c744.png",
     "static/media/certdev.png": "./static/media/certdev.6b2fe0732acede573757.png",
     "static/media/alamocup.png": "./static/media/alamocup.618338aaef93f338bca8.png",
@@ -21,11 +23,11 @@
     "static/media/html.png": "./static/media/html.d101fa1bdf033ea1ad37.png",
     "static/media/java.png": "./static/media/java.6c64373d3b7415758078.png",
     "index.html": "./index.html",
-    "main.e769b152.css.map": "./static/css/main.e769b152.css.map",
-    "main.5f679beb.js.map": "./static/js/main.5f679beb.js.map"
+    "main.64dd563e.css.map": "./static/css/main.64dd563e.css.map",
+    "main.148bd0d6.js.map": "./static/js/main.148bd0d6.js.map"
   },
   "entrypoints": [
-    "static/css/main.e769b152.css",
-    "static/js/main.5f679beb.js"
+    "static/css/main.64dd563e.css",
+    "static/js/main.148bd0d6.js"
   ]
 }
