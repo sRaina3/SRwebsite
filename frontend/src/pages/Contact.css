@@ -1,0 +1,55 @@
+.contact-container {
+  height: 100vh;
+  overflow-y: auto;
+  overflow-x: hidden;
+  animation: fadeIn 1s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  z-index: 1;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.header-text {
+  font-family: 'Lato', sans-serif;
+  text-align: center;
+  margin-top: 40vh;
+  font-size: 60px;
+  z-index: 1;
+  color: rgb(185, 62, 62);
+}
+
+.cont-buttons-container {
+  position: fixed;
+  top: 20px;
+  left: 10px;
+  z-index: 2;
+}
+
+.cont-home-button,
+.cont-portfolio-button {
+  font-size: 30px;
+  margin: 0 10px;
+  padding: 10px 20px;
+  background-color: transparent;
+  border: 2px solid white;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+  z-index: 3;
+}
+
+.cont-home-button:hover {
+  background-color: rgb(52, 159, 209);
+}
+
+.cont-portfolio-button:hover {
+  background-color: green;
+}
