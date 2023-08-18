@@ -1,8 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
 .Home-container {
   width: 100vw;
   display: flex;
   flex-direction: row;
   overflow: auto;
+  animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 .Home-info {
@@ -39,6 +51,7 @@
 }
 
 .name-text {
+  font-family: 'Lato', sans-serif;
   margin-top: 15vh;
   left: 50%;
   font-size: 80px;
