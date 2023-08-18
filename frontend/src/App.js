@@ -12,7 +12,7 @@ const App = () => {
 
   useEffect(() => {
     const newDots = [];
-    for (let i = 0; i < 40; i++) {
+    for (let i = 0; i < 20; i++) {
       newDots.push({
         x: Math.random() * window.innerWidth,
         y: Math.random() * window.innerHeight,
@@ -68,8 +68,8 @@ const App = () => {
     const newDot = {
       x: event.clientX,
       y: event.clientY,
-      vx: (Math.random() - 0.5) * 2,
-      vy: (Math.random() - 0.5) * 2, 
+      vx: (Math.random() - 0.5),
+      vy: (Math.random() - 0.5), 
       color: getRandomColor()
     };
 
@@ -115,6 +115,7 @@ const App = () => {
           <Route path='/' element={<Home/>}/>
           <Route path='/Portfolio' element={<Portfolio/>}/>
           <Route path='/Contact' element={<Contact/>}/>
+          <Route path='*' element={<Home/>}/>
         </Routes>
         <Navbar/>   
       </Router>
