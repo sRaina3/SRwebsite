@@ -1,22 +1,22 @@
 import { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom';
 
-import LinkedIn from '../assets/linkedIn.png'
-import Github from '../assets/github-mark-white.png'
-import Profile from '../assets/profile-pic.png'
+import LinkedIn from '../images/linkedIn.png'
+import Github from '../images/github-mark-white.png'
+import Profile from '../images/profile-pic.png'
 import './Home.css'
 
 const Home = () => {
   const [curTitle, setCurTitle] = useState(0)
 
-  const titles = ['Full Stack Software Developer', 'MERN Stack Engineer', 'AWS Certified Developer', 
-                  'UT Austin Student', 'Frontend Web Developer', 'AWS Serverless Architect']
+  const titles = ['Full Stack Software Developer', 'AWS Serverless Architect', 'MERN Stack Developer', 
+                  'UT Austin Student', 'Frontend Web Developer', 'Multi-Language Programmer', 'AWS Certified Developer']
   
-  const colors = ['#FF5733', '#33FF57', '#3357FF', '#E60D1A', '#FF33E9', '#008000']
+  const colors = ['#FF5733', '#33FF57', '#3357FF', '#E60D1A', '#FF33E9', '#008000', '#f2d658']
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurTitle((curTitle + 1) % 6)
+      setCurTitle((curTitle + 1) % 7)
     }, 3000);
 
     return () => {
