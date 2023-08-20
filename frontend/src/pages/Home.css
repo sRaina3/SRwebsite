@@ -129,3 +129,19 @@
   height: 8px;
   background-color: rgb(209, 203, 203);
 }
+
+@media (max-width: 800px) {
+  .profile-img {
+    height: 300px;
+  }
+
+  .name-text {
+    left: 0%;
+    font-size: 50px;
+  }
+
+  .my-titles {
+    font-size: 30px;
+  }
+
+}
