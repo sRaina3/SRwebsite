@@ -268,3 +268,44 @@
 .toggle-btn:hover {
   background-color: rgb(114, 21, 154);
 }
+
+@media (max-width: 800px) {
+  .portfolio-title {
+    margin-top: 0;
+  }
+
+  .certification-item {
+    font-size: 18px;
+  }
+
+  .certification-item img{
+    width: 120px;
+  }
+
+  .tech-item img {
+    width: 40px;
+    height: auto;
+  }
+
+  .tech-item {
+    font-size: 18px;
+  }
+
+  .exp-display {
+    font-size: 18px;
+  }
+
+  .proj-image {
+    width: 200px;
+  }
+
+  .description {
+    width: 400px;
+    font-size: 20px;
+  }
+
+  .inf-image {
+    width: 400px;
+    height: auto;
+  }
+}
