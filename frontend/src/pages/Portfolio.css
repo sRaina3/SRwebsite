@@ -3,7 +3,7 @@
 
 .port-page-container {
   height: 100vh;
-  overflow-y: auto;
+  overflow-y: scroll;
   overflow-x: hidden;
   animation: fadeIn 1s ease-in-out;
   display: flex;
@@ -270,12 +270,29 @@
 }
 
 @media (max-width: 800px) {
-  .portfolio-title {
-    margin-top: 0;
+  .port-page-container {
+    overflow-x: scroll;
   }
 
+  .portfolio-title {
+    margin-top: 20px;
+  }
+
+  .skills-column-left,
+  .skills-column-right {
+    width: 100vw;
+  }
+
+  .vertical-divider {
+    margin-top: 0px;
+    margin-left: 0px;
+    width: 0px; 
+    height: 0%; 
+    background-color: transparent;
+  }
+  
   .certification-item {
-    font-size: 18px;
+    font-size: 20px;
   }
 
   .certification-item img{
@@ -284,11 +301,12 @@
 
   .tech-item img {
     width: 40px;
-    height: auto;
+    height: 40px;
   }
 
   .tech-item {
-    font-size: 18px;
+    font-size: 16px;
+    max-width: none;
   }
 
   .exp-display {
@@ -296,16 +314,35 @@
   }
 
   .proj-image {
+    margin-left: 20px;
     width: 200px;
   }
 
   .description {
-    width: 400px;
+    margin-top: -40px;
+    margin-left: 200px;
+    width: 450px;
     font-size: 20px;
   }
 
   .inf-image {
-    width: 400px;
+    margin-left: 200px;
+    width: 450px;
+    font-size: 20px;
     height: auto;
+  }
+
+  .proj {
+    margin-left: 400px;
+    width: 800px;
+  }
+
+  .proj-buttons {
+    margin-left: 225px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    text-align: center;
+    z-index: 10;
   }
 }

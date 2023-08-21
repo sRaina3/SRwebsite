@@ -132,16 +132,27 @@
 
 @media (max-width: 800px) {
   .profile-img {
+    margin-left: 100px;
     height: 300px;
   }
 
+  .Home-info {
+    width: 300px;
+  }
+
   .name-text {
-    left: 0%;
-    font-size: 50px;
+    font-size: 40px;
   }
 
   .my-titles {
-    font-size: 30px;
+    font-size: 24px;
   }
 
+  .portfolio-button,
+  .contact-button {
+  font-size: 20px;
+  margin: 0 5px;
 }
+
+}
+
