@@ -10,6 +10,8 @@ const App = () => {
   const [dots, setDots] = useState([]);
   const [showDots, setShowDots] = useState(true)
 
+  const screenSize = window.innerWidth
+  
   useEffect(() => {
     const newDots = [];
     for (let i = 0; i < 20; i++) {
@@ -83,47 +85,62 @@ const App = () => {
     setShowDots(!showDots);
   };
 
-  return (
-    <div className='App' onClick={handleDotClick}>
-      {dots.map((dot, index) => (
-        <div
-          key={index}
-          className="dot"
-          style={{left: dot.x, top: dot.y, backgroundColor: dot.color}}
-        >
-          {dots.map((otherDot, otherIndex) => {
-            if (index !== otherIndex) {
-              const distance = Math.sqrt((dot.x - otherDot.x) ** 2 + (dot.y - otherDot.y) ** 2)
-              if (distance <= 80) {
-                  return (
-                    <div
-                      key={otherIndex}
-                      className="line"
-                      style={{left: 4, top: 4, width: distance,
-                        transform: `rotate(${Math.atan2(otherDot.y - dot.y, otherDot.x - dot.x)}rad)`
-                      }}
-                    ></div>
-                  );
-                }
-            }
-            return null;
-          })}
-        </div>
-      ))}
-      <Router>
-        <Routes>
-          <Route path='/' element={<Home/>}/>
-          <Route path='/Portfolio' element={<Portfolio/>}/>
-          <Route path='/Contact' element={<Contact/>}/>
-          <Route path='*' element={<Home/>}/>
-        </Routes>
-        <Navbar/>   
-      </Router>
-      <button className='hide-background-button' onClick={handleHideBackground}>
-        {showDots ? 'Pause Background' : 'Resume Background'}
-      </button>
-    </div>
-  );
+  if (screenSize > 768) {
+    return (
+      <div className='App' onClick={handleDotClick}>
+        {dots.map((dot, index) => (
+          <div
+            key={index}
+            className="dot"
+            style={{left: dot.x, top: dot.y, backgroundColor: dot.color}}
+          >
+            {dots.map((otherDot, otherIndex) => {
+              if (index !== otherIndex) {
+                const distance = Math.sqrt((dot.x - otherDot.x) ** 2 + (dot.y - otherDot.y) ** 2)
+                if (distance <= 80) {
+                    return (
+                      <div
+                        key={otherIndex}
+                        className="line"
+                        style={{left: 4, top: 4, width: distance,
+                          transform: `rotate(${Math.atan2(otherDot.y - dot.y, otherDot.x - dot.x)}rad)`
+                        }}
+                      ></div>
+                    );
+                  }
+              }
+              return null;
+            })}
+          </div>
+        ))}
+        <Router>
+          <Routes>
+            <Route path='/' element={<Home/>}/>
+            <Route path='/Portfolio' element={<Portfolio/>}/>
+            <Route path='/Contact' element={<Contact/>}/>
+            <Route path='*' element={<Home/>}/>
+          </Routes>
+          <Navbar/>   
+        </Router>
+        <button className='hide-background-button' onClick={handleHideBackground}>
+          {showDots ? 'Pause Background' : 'Resume Background'}
+        </button>
+      </div>
+    );
+  } else {
+    return (
+      <div className='mobile'>
+        <Router>
+          <Routes>
+            <Route path='/' element={<Home/>}/>
+            <Route path='/Portfolio' element={<Portfolio/>}/>
+            <Route path='/Contact' element={<Contact/>}/>
+            <Route path='*' element={<Home/>}/>
+          </Routes>
+        </Router>
+      </div>
+    );
+  }
 }
 
 export default App;

@@ -1,7 +1,7 @@
 .contact-container {
   height: 100vh;
-  overflow-y: auto;
-  overflow-x: hidden;
+  background-color: black;
+  overflow: scroll;
   animation: fadeIn 1s ease-in-out;
   display: flex;
   flex-direction: column;

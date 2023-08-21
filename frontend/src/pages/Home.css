@@ -1,10 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
 
 .Home-container {
-  width: 100vw;
+  background-color: black;
+  overflow: scroll;
   display: flex;
   flex-direction: row;
-  overflow: auto;
   animation: fadeIn 1s ease-in-out;
 }
 
@@ -18,9 +18,9 @@
 }
 
 .Home-info {
-  margin-left: 4vw;
-  width: 50vw;
-  height: 100vh;
+  margin-left: 50px;
+  width: 50%;
+  height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -28,8 +28,7 @@
 }
 
 .profile-pic {
-  width: 50vw;
-  height: 100vh;
+  height: 100%;
   z-index: 1;
   display: flex;
   flex-direction: column;
@@ -37,9 +36,9 @@
 }
 
 .profile-img {
-  margin-right: 12vw;
-  margin-top: 15vh;
-  height: 70vh;
+  margin-right: 100px;
+  margin-top: 80px;
+  height: 500px;
 }
 
 @keyframes tilt-n-move-shaking {
@@ -52,7 +51,7 @@
 
 .name-text {
   font-family: 'Lato', sans-serif;
-  margin-top: 15vh;
+  margin-top: 100px;
   left: 50%;
   font-size: 80px;
   color: rgb(232, 226, 226);
@@ -80,7 +79,7 @@
 .buttons-container {
   display: flex;
   justify-content: center;
-  margin-top: 5vh;
+  margin-top: 40px;
 }
 
 .portfolio-button,
@@ -107,18 +106,18 @@
 .logos-container {
   display: flex;
   justify-content: center;
-  margin-top: 5vh;
+  margin-top: 40px;
 }
 
 .linkedin-logo {
-  margin: 0 5vw;
+  margin: 0 40px;
   height: 100px;
   cursor: pointer;
   animation: tilt-n-move-shaking 2s ease-in-out infinite;
 }
 
 .github-logo {
-  margin: 0 5vw;
+  margin: 0 40px;
   height: 100px;
   cursor: pointer;
   animation: tilt-n-move-shaking 2s ease-in-out 1s infinite;
