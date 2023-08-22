@@ -11,9 +11,6 @@
   z-index: 1;
 }
 
-::-webkit-scrollbar {
-  z-index: 1;
-}
 
 
 @keyframes fadeIn {
