@@ -46,9 +46,9 @@ const App = () => {
             y: dot.y + newVY,
             vx: newVX,
             vy: newVY,
-            };
+            }
           })
-        );
+        )
       }
       animationFrameId = requestAnimationFrame(animate);
     };
@@ -63,7 +63,7 @@ const App = () => {
     const r = Math.floor(Math.random() * 256);
     const g = Math.floor(Math.random() * 256);
     const b = Math.floor(Math.random() * 256);
-    return `rgb(${r},${g},${b})`;
+    return `rgb(${r},${g},${b})`
   }
 
   const handleDotClick = (event) => {
@@ -106,7 +106,7 @@ const App = () => {
                           transform: `rotate(${Math.atan2(otherDot.y - dot.y, otherDot.x - dot.x)}rad)`
                         }}
                       ></div>
-                    );
+                    )
                   }
               }
               return null;
