@@ -130,9 +130,14 @@
 }
 
 @media (max-width: 800px) {
+  .Home-container {
+    flex-direction: column;
+  }
+
   .profile-img {
-    margin-left: 100px;
     height: 300px;
+    margin-top: 20px;
+    margin-left: 130px;
   }
 
   .Home-info {
