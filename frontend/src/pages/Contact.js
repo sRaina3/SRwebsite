@@ -30,9 +30,11 @@ const Contact = () => {
       });
       if (response.ok) {
         alert('Message sent successfully!');
+        console.log(response)
         setFormData({
           name: '',
           email: '',
+          subject: '',
           message: ''
         });
       } else {
