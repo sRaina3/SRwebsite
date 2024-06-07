@@ -17,7 +17,8 @@ public class WebConfig {
                         .allowedOrigins("https://sraina3.github.io", "https://saranshraina.com")
                         .allowedMethods("GET", "POST", "PUT", "DELETE", "OPTIONS")
                         .allowedHeaders("*")
-                        .allowCredentials(true);
+                        .allowCredentials(true)
+                        .exposedHeaders("Access-Control-Allow-Origin");
             }
         };
     }
