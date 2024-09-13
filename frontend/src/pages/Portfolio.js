@@ -64,17 +64,17 @@ const Portfolio = () => {
           <div className="skills-column-right">
             <h2 className="category-header">Technologies</h2>
             <div className="certification-container">
-              <div className='exp-display' style={{color: '#f13b38'}}>4+ Years</div>
+              <div className='exp-display' style={{color: '#f13b38'}}>6+ Years</div>
               <div className="tech-item"><img src={Java} alt="Java" /><p>Java</p></div>
               <div className="tech-item"><img src={Cplus} alt="Cplus" /><p>C++</p></div>
               <div className="tech-item"><img src={Clang} alt="Clang" /><p>C</p></div>
               <div className="tech-item"><img src={HTMLLogo} alt="HTML" /><p>HTML</p></div>
-              <div className='exp-display' style={{color: 'goldenrod'}}>2+ Years</div>
+              <div className='exp-display' style={{color: 'goldenrod'}}>4+ Years</div>
               <div className="tech-item"><img src={Node} alt="Node" /><p>Node JS</p></div>
               <div className="tech-item"><img src={JSLogo} alt="JS" /><p>JavaScript</p></div>
               <div className="tech-item"><img src={Python} alt="Python" /><p>Python</p></div>
               <div className="tech-item"><img src={CSSLogo} alt="CSS" /><p>CSS</p></div>
-              <div className='exp-display' style={{color: '#0ca447'}}>1+ Years</div>
+              <div className='exp-display' style={{color: '#0ca447'}}>2+ Years</div>
               <div className="tech-item"><img src={Mongo} alt="Mongo" /><p>MongoDB</p></div>
               <div className="tech-item"><img src={reactLogo} alt="react logo" /><p>React</p></div>
               <div className="tech-item"><img src={Lambda} alt="Lambda" /><p>Lambda</p></div>

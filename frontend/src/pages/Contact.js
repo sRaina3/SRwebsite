@@ -18,33 +18,28 @@ const Contact = () => {
     });
   };
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
-    try {
-      const response = await fetch('https://srwebsite-contact.onrender.com/api/contact', {
+    alert('Message sent successfully!');
+    fetch('https://srwebsite-contact.onrender.com/api/contact', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify(formData)
-      });
-      if (response.ok) {
-        alert('Message sent successfully!');
-        console.log(response)
-        setFormData({
-          name: '',
-          email: '',
-          subject: '',
-          message: ''
-        });
-      } else {
-        alert('Failed to send message.');
-      }
-    } catch (error) {
+    })
+    .catch((error) => {
       console.error('Error:', error);
-      alert('Failed to send message.');
-    }
+    });
+    // Reset form data
+    setFormData({
+      name: '',
+      email: '',
+      subject: '',
+      message: ''
+    });
   };
+
 
   return (
     <div className='contact-container'>
